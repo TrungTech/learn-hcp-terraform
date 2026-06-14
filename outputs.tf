@@ -11,3 +11,7 @@ output "instance_internal_ip" {
 output "instance_subnet" {
   value = google_compute_subnetwork.private.id
 }
+
+output "instance_hostname" {
+  value       = google_compute_instance.app_server.hostname
+}
