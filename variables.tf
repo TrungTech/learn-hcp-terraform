@@ -1,11 +1,28 @@
+variable "project_id" {
+  description = "The GCP project ID to deploy resources into."
+  type        = string
+}
+
+variable "region" {
+  description = "The GCP region for regional resources."
+  type        = string
+  default     = "us-west1"
+}
+
+variable "zone" {
+  description = "The GCP zone for the Compute Engine instance."
+  type        = string
+  default     = "us-west1-a"
+}
+
 variable "instance_name" {
-  description = "Value of the EC2 instance's Name tag."
+  description = "Name of the Compute Engine instance."
   type        = string
   default     = "learn-terraform"
 }
 
-variable "instance_type" {
-  description = "The EC2 instance's type."
+variable "machine_type" {
+  description = "The Compute Engine instance's machine type."
   type        = string
-  default     = "t2.micro"
+  default     = "e2-micro"
 }
